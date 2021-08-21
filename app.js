@@ -1,7 +1,7 @@
 var userScore = 0;
 var computerScore = 0;
 var choice_History = "";
-const userScore_span = document.getElementById("user-score"); 
+const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
 const result_p = document.querySelector(".result > p");
@@ -13,10 +13,10 @@ const game_over_h1 = document.getElementById("Message");
 
 
 function convertToWord(letter){
-    if(letter == 'r'){ 
+    if(letter == 'r'){
         return "Rock";
     }
-    if(letter == 'p'){ 
+    if(letter == 'p'){
         return "Paper"};
     if(letter == 's') {
         return "Scissors"};
@@ -24,11 +24,9 @@ function convertToWord(letter){
 
 function generateNextMarkovResponse(choice_History){
     if (choice_History.length<20){
-        var n_gram_len =1
-    }else if(choice_History.length>=20 && choice_History.length<40){
-        var n_gram_len=2
+        var n_gram_len =1;
     }else{
-        var n_gram_len=3
+        var n_gram_len=2;
     }
     var n_grams = {};
     for(var i = 0; i<choice_History.length-n_gram_len;i++){
@@ -56,7 +54,7 @@ function generateNextMarkovResponse(choice_History){
             return "r";
         }
     }
-    
+
 }
 function win(userChoice,computerChoice){
     userScore++;
@@ -118,7 +116,7 @@ function game(userChoice){
         case "ss":
             draw(userChoice,computerChoice);
             break;
-        
+
 
     }
 }
