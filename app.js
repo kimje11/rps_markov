@@ -99,7 +99,7 @@ function endGame(Winner){
 }
 
 function game(userChoice){
-    var computerChoice=generateNextMarkovResponse(choice_History,1);
+    var computerChoice=generateNextMarkovResponse(choice_History);
     switch(userChoice + computerChoice){
         case "rs":
         case "pr":
