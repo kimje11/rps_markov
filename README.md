@@ -8,5 +8,6 @@ git clone https://github.com/Greg-Zavalnitskiy/MarkovChains-RockPaperScissors
 ## How To Use
 1. After installation, open google chrome browser.
 2. Press CTRL + O in browser.
-3. Open index.html
-4. Enjoy!
+3. Open MarkovChains-RockPaperScissors folder
+4. Open index.html
+5. Enjoy!
