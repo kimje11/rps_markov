@@ -63,7 +63,7 @@ function win(userChoice,computerChoice){
     if(userScore==30){
         endGame("Player");
     }else if(computerScore==30){
-        endGame("Markov")
+        endGame("Markov");
     }
 }
 function lose(userChoice,computerChoice){
@@ -73,7 +73,7 @@ function lose(userChoice,computerChoice){
     if(userScore==30){
         endGame("Player");
     }else if(computerScore==30){
-        endGame("Markov")
+        endGame("Markov");
     }
 
 }
@@ -123,20 +123,20 @@ function game(userChoice){
 
 function main(){
 rock_div.addEventListener("click",function(){
-    console.log(choice_History)
+    console.log(choice_History);
     game("r");
-    choice_History=choice_History.concat("r")
+    choice_History=choice_History.concat("r");
 })
 paper_div.addEventListener("click",function(){
-    console.log(choice_History)
+    console.log(choice_History);
     game("p");
-    choice_History=choice_History.concat("p")
+    choice_History=choice_History.concat("p");
 
 })
 scissors_div.addEventListener("click",function(){
-    console.log(choice_History)
+    console.log(choice_History);
     game("s");
-    choice_History=choice_History.concat("s")
+    choice_History=choice_History.concat("s");
 })
 restart_button.addEventListener("click",function(){
     window.location.reload();
