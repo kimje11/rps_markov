@@ -14,12 +14,12 @@ const game_over_h1 = document.getElementById("Message");
 
 function convertToWord(letter){
     if(letter == 'r'){
-        return "Rock";
+        return "바위";
     }
     if(letter == 'p'){
-        return "Paper"};
+        return "보"};
     if(letter == 's') {
-        return "Scissors"};
+        return "가위"};
 }
 
 function generateNextMarkovResponse(choice_History){
@@ -59,17 +59,17 @@ function generateNextMarkovResponse(choice_History){
 function win(userChoice,computerChoice){
     userScore++;
     userScore_span.innerHTML = userScore;
-    result_p.innerHTML=convertToWord(userChoice) +" beats "+ convertToWord(computerChoice)+ ". You Win!";
-    if(userScore==30){
+    result_p.innerHTML="플레이어 선택은 " + convertToWord(userChoice) +"<p> AI 선택은 "+ convertToWord(computerChoice)+ "<p> You Win!";
+    if(userScore==20){
         endGame("Player");
-    }else if(computerScore==30){
+    }else if(computerScore==20){
         endGame("Markov");
     }
 }
 function lose(userChoice,computerChoice){
     computerScore++;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML=convertToWord(computerChoice) +" beats "+ convertToWord(userChoice)+ ". You Lose!";
+    result_p.innerHTML="플레이어 선택은 " + convertToWord(userChoice) +"<p> AI 선택은 "+ convertToWord(computerChoice)+ "<p> You Lose!";
     if(userScore==30){
         endGame("Player");
     }else if(computerScore==30){
@@ -78,7 +78,7 @@ function lose(userChoice,computerChoice){
 
 }
 function draw(userChoice,computerChoice){
-    result_p.innerHTML=convertToWord(computerChoice) +" cancels "+ convertToWord(userChoice)+ ". Draw!";
+    result_p.innerHTML="플레이어 선택은 " + convertToWord(userChoice) +"<p> AI 선택은 "+ convertToWord(computerChoice)+ "<p> Draw!";
 }
 
 function endGame(Winner){
@@ -90,10 +90,10 @@ function endGame(Winner){
     paper_div.style.display="none";
     scissors_div.style.display="none";
     if(Winner=="Markov"){
-        game_over_h1.innerHTML="Game Over! You have lost! "+computerScore+"-"+userScore+"! Click the Restart Button To Play Again!";
+        game_over_h1.innerHTML="Game Over! 당신이 졌습니다.! "+computerScore+"-"+userScore+"!";
     }
     else{
-        game_over_h1.innerHTML="CONGRATULATIONS! You have Won "+userScore+"-"+computerScore+"! Click the Restart Button To Play Again!";
+        game_over_h1.innerHTML="CONGRATULATIONS! 당신이 이겼습니다."+userScore+"-"+computerScore+"!";
     }
     game_over_h1.style.display="block";
 }
