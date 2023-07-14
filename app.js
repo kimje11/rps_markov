@@ -70,9 +70,9 @@ function lose(userChoice,computerChoice){
     computerScore++;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML="플레이어 선택은 " + convertToWord(userChoice) +"<p> AI 선택은 "+ convertToWord(computerChoice)+ "<p> You Lose!";
-    if(userScore==30){
+    if(userScore==20){
         endGame("Player");
-    }else if(computerScore==30){
+    }else if(computerScore==20){
         endGame("Markov");
     }
 
